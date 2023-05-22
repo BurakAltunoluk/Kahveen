@@ -1,24 +1,311 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Kahveen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="m8m-UE-lSY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gdZ-Aw-Zfc">
+                                <rect key="frame" x="20" y="791" width="29" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xvi-nP-XaP">
+                                    <size key="itemSize" width="374" height="216"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell1" id="x74-gV-CPq" customClass="CollectionViewCell" customModule="Kahveen" customModuleProvider="target">
+                                        <rect key="frame" x="-172.5" y="0.0" width="374" height="216"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lVS-Ah-WOy">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="216"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="longBackground" translatesAutoresizingMaskIntoConstraints="NO" id="IVP-5S-PIf">
+                                                    <rect key="frame" x="7" y="4" width="368" height="208"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brazil Santos" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="1lw-hz-bjo">
+                                                    <rect key="frame" x="160" y="25" width="199" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="YXu-F6-u00"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="25"/>
+                                                    <color key="textColor" red="1" green="0.66230955331851415" blue="0.37716712675261144" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light / Medium / Dark" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="TBv-QK-1Ch">
+                                                    <rect key="frame" x="194" y="54" width="165" height="30"/>
+                                                    <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="18"/>
+                                                    <color key="textColor" red="0.95052176710000003" green="0.65863424540000004" blue="0.37247627970000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffeeBag" translatesAutoresizingMaskIntoConstraints="NO" id="r7A-aZ-H6I">
+                                                    <rect key="frame" x="18" y="37" width="90" height="140"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="BOI-Pw-B6X"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="Dark roast Brazil Santos coffee is a type of coffee that is made from beans grown in the  ..." textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uha-47-GmJ">
+                                                    <rect key="frame" x="131" y="89" width="228" height="71"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="71" id="RLF-gE-9Jn"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="1" green="0.80892390339999998" blue="0.40900356040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£12/kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="vZU-iB-7MW">
+                                                    <rect key="frame" x="277" y="164" width="82" height="35"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="82" id="5Qr-27-zRL"/>
+                                                        <constraint firstAttribute="height" constant="35" id="i0Z-Dm-lXJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                                    <color key="textColor" red="0.89902303202713441" green="0.89430941261262431" blue="0.72308724995867402" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="1lw-hz-bjo" secondAttribute="trailing" constant="15" id="5Vp-6w-tPi"/>
+                                                <constraint firstAttribute="trailing" secondItem="vZU-iB-7MW" secondAttribute="trailing" constant="15" id="6jD-o0-ihl"/>
+                                                <constraint firstAttribute="trailing" secondItem="TBv-QK-1Ch" secondAttribute="trailing" constant="15" id="8a0-gJ-o5Q"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uha-47-GmJ" secondAttribute="trailing" constant="15" id="CD5-eU-2Mm"/>
+                                                <constraint firstItem="vZU-iB-7MW" firstAttribute="top" secondItem="Uha-47-GmJ" secondAttribute="bottom" constant="4" id="JLF-So-uSC"/>
+                                                <constraint firstItem="1lw-hz-bjo" firstAttribute="leading" secondItem="lVS-Ah-WOy" secondAttribute="leading" constant="160" id="OUW-Qq-3Fi"/>
+                                                <constraint firstAttribute="bottom" secondItem="r7A-aZ-H6I" secondAttribute="bottom" constant="39" id="Rpw-fT-5sk"/>
+                                                <constraint firstItem="r7A-aZ-H6I" firstAttribute="top" secondItem="lVS-Ah-WOy" secondAttribute="top" constant="37" id="T9b-mL-Xie"/>
+                                                <constraint firstItem="TBv-QK-1Ch" firstAttribute="trailing" secondItem="1lw-hz-bjo" secondAttribute="trailing" id="XGR-hc-A3k"/>
+                                                <constraint firstAttribute="bottom" secondItem="vZU-iB-7MW" secondAttribute="bottom" constant="17" id="h6V-d6-nkZ"/>
+                                                <constraint firstItem="Uha-47-GmJ" firstAttribute="top" secondItem="TBv-QK-1Ch" secondAttribute="bottom" constant="5" id="kFU-jh-I1O"/>
+                                                <constraint firstItem="r7A-aZ-H6I" firstAttribute="leading" secondItem="lVS-Ah-WOy" secondAttribute="leading" constant="18" id="laX-L9-fWw"/>
+                                                <constraint firstItem="Uha-47-GmJ" firstAttribute="leading" secondItem="r7A-aZ-H6I" secondAttribute="trailing" constant="23" id="p7f-rv-DOL"/>
+                                                <constraint firstItem="TBv-QK-1Ch" firstAttribute="top" secondItem="1lw-hz-bjo" secondAttribute="bottom" constant="4" id="qEV-iI-PaX"/>
+                                                <constraint firstItem="1lw-hz-bjo" firstAttribute="top" secondItem="lVS-Ah-WOy" secondAttribute="top" constant="25" id="yzM-vh-oIf"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.95144568931889117" blue="0.81293284020588696" alpha="0.077277516231101712" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <size key="customSize" width="374" height="216"/>
+                                        <connections>
+                                            <outlet property="CoffeeBagImage" destination="r7A-aZ-H6I" id="MMT-Rg-DgD"/>
+                                            <outlet property="imageView" destination="IVP-5S-PIf" id="pP3-Ck-fnL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kDO-dI-w42"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="F1z-d4-fQ4"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="m8m-UE-lSY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Q6-LV-fXv"/>
+                            <constraint firstItem="m8m-UE-lSY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Khn-Ld-yWW"/>
+                            <constraint firstAttribute="bottom" secondItem="m8m-UE-lSY" secondAttribute="bottom" constant="-4" id="Za0-W9-m5w"/>
+                            <constraint firstItem="m8m-UE-lSY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ns6-7V-yza"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="wHY-EM-XH9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="gdZ-Aw-Zfc" id="LEM-Xx-ejT"/>
+                        <segue destination="HuO-PZ-RMk" kind="presentation" identifier="detailsVC" modalPresentationStyle="fullScreen" id="INE-1Z-Egp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1026.0869565217392" y="3.3482142857142856"/>
+        </scene>
+        <!--Details And OrderVC-->
+        <scene sceneID="lXN-pb-4wA">
+            <objects>
+                <viewController id="HuO-PZ-RMk" customClass="DetailsAndOrderVC" customModule="Kahveen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SIM-IK-yzh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8Ls-wn-G5h">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5u-as-i5e">
+                                <rect key="frame" x="20" y="115" width="374" height="652"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2pr-XD-Tfy">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="652"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffeeBag" translatesAutoresizingMaskIntoConstraints="NO" id="Gwp-xS-8mC">
+                                        <rect key="frame" x="15" y="15" width="90" height="175"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="175" id="noK-RH-pBx"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="xyQ-QF-zld"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brazil Santos" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sDh-wn-bq4">
+                                        <rect key="frame" x="204.5" y="15" width="154.5" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="g8w-rL-ljs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="29"/>
+                                        <color key="textColor" red="1" green="0.66230955329999996" blue="0.37716712679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Eq0-In-9KK">
+                                        <rect key="frame" x="296.5" y="40" width="62.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="18"/>
+                                        <color key="textColor" red="0.95052176710000003" green="0.65863424540000004" blue="0.37247627970000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBp-EX-Cez">
+                                        <rect key="frame" x="138" y="70" width="221" height="120"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Dark roast Brazil Santos coffee is a type of coffee that is made from beans grown in the  Dark roast Brazil Santos coffee is a type of coffee that is made from beans grown in the  </string>
+                                        <color key="textColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                    </textView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GMO-1S-Jdj">
+                                        <rect key="frame" x="15" y="215" width="344" height="32"/>
+                                        <segments>
+                                            <segment title="Light"/>
+                                            <segment title="Medium"/>
+                                            <segment title="Dark"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="selectedSegmentTintColor" red="1" green="0.66230955329999996" blue="0.37716712679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="boo-qq-xr6">
+                                        <rect key="frame" x="15" y="261" width="344" height="32"/>
+                                        <segments>
+                                            <segment title="1Kg"/>
+                                            <segment title="5Kg"/>
+                                            <segment title="10Kg"/>
+                                            <segment title="15Kg"/>
+                                            <segment title="20Kg"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="selectedSegmentTintColor" red="1" green="0.66230955329999996" blue="0.37716712679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDN-wt-zbE">
+                                        <rect key="frame" x="262" y="605" width="97" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="qMh-ob-kue"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.66230955329999996" blue="0.37716712679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="£12 order">
+                                            <color key="baseBackgroundColor" red="1" green="0.66230955329999996" blue="0.37716712679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£12/kg" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="tMv-7L-T0T">
+                                        <rect key="frame" x="277" y="175" width="82" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="82" id="oMT-mk-Ms3"/>
+                                            <constraint firstAttribute="height" constant="35" id="wPg-8Z-Wra"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <color key="textColor" red="0.899023032" green="0.89430941259999996" blue="0.72308724999999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 1Kg x Brazil Santos (Medium)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="phv-Ki-dtw">
+                                        <rect key="frame" x="58.5" y="307" width="257" height="22"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="1" green="0.66230955329999996" blue="0.37716712679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.11610568299585459" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2pr-XD-Tfy" firstAttribute="top" secondItem="Z5u-as-i5e" secondAttribute="top" id="0dY-4E-LJ1"/>
+                                    <constraint firstAttribute="trailing" secondItem="sDh-wn-bq4" secondAttribute="trailing" constant="15" id="1El-sh-Lcj"/>
+                                    <constraint firstItem="2pr-XD-Tfy" firstAttribute="leading" secondItem="Z5u-as-i5e" secondAttribute="leading" id="1Kp-cu-sC3"/>
+                                    <constraint firstItem="phv-Ki-dtw" firstAttribute="centerX" secondItem="Z5u-as-i5e" secondAttribute="centerX" id="5KB-sP-P1e"/>
+                                    <constraint firstItem="Gwp-xS-8mC" firstAttribute="top" secondItem="Z5u-as-i5e" secondAttribute="top" constant="15" id="7ku-9M-0DN"/>
+                                    <constraint firstAttribute="trailing" secondItem="GMO-1S-Jdj" secondAttribute="trailing" constant="15" id="7oD-rS-cQa"/>
+                                    <constraint firstItem="Eq0-In-9KK" firstAttribute="top" secondItem="sDh-wn-bq4" secondAttribute="bottom" id="C7k-l6-G2r"/>
+                                    <constraint firstAttribute="trailing" secondItem="boo-qq-xr6" secondAttribute="trailing" constant="15" id="DWS-Xx-7xW"/>
+                                    <constraint firstAttribute="bottom" secondItem="zDN-wt-zbE" secondAttribute="bottom" constant="16" id="Hnp-ui-TdS"/>
+                                    <constraint firstItem="GMO-1S-Jdj" firstAttribute="top" secondItem="tMv-7L-T0T" secondAttribute="bottom" constant="5" id="OTi-26-rig"/>
+                                    <constraint firstItem="GMO-1S-Jdj" firstAttribute="top" secondItem="Gwp-xS-8mC" secondAttribute="bottom" constant="25" id="PE0-4P-fJn"/>
+                                    <constraint firstAttribute="bottom" secondItem="2pr-XD-Tfy" secondAttribute="bottom" id="PSZ-5P-yjL"/>
+                                    <constraint firstAttribute="trailing" secondItem="tMv-7L-T0T" secondAttribute="trailing" constant="15" id="WGA-BL-TIi"/>
+                                    <constraint firstItem="KBp-EX-Cez" firstAttribute="bottom" secondItem="Gwp-xS-8mC" secondAttribute="bottom" id="Wl2-eN-6sM"/>
+                                    <constraint firstAttribute="trailing" secondItem="2pr-XD-Tfy" secondAttribute="trailing" id="YeZ-RG-BJy"/>
+                                    <constraint firstItem="KBp-EX-Cez" firstAttribute="top" secondItem="Eq0-In-9KK" secondAttribute="bottom" id="cb3-HA-JA9"/>
+                                    <constraint firstItem="KBp-EX-Cez" firstAttribute="leading" secondItem="Gwp-xS-8mC" secondAttribute="trailing" constant="33" id="hFO-Ul-Zh0"/>
+                                    <constraint firstAttribute="trailing" secondItem="KBp-EX-Cez" secondAttribute="trailing" constant="15" id="hmq-XZ-rTh"/>
+                                    <constraint firstItem="boo-qq-xr6" firstAttribute="leading" secondItem="Z5u-as-i5e" secondAttribute="leading" constant="15" id="hxj-CX-OiV"/>
+                                    <constraint firstItem="boo-qq-xr6" firstAttribute="top" secondItem="GMO-1S-Jdj" secondAttribute="bottom" constant="15" id="i4T-42-QbP"/>
+                                    <constraint firstItem="phv-Ki-dtw" firstAttribute="top" secondItem="boo-qq-xr6" secondAttribute="bottom" constant="15" id="iiZ-de-kqA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eq0-In-9KK" secondAttribute="trailing" constant="15" id="jst-vG-x7r"/>
+                                    <constraint firstAttribute="trailing" secondItem="zDN-wt-zbE" secondAttribute="trailing" constant="15" id="lsf-nG-Mev"/>
+                                    <constraint firstItem="GMO-1S-Jdj" firstAttribute="leading" secondItem="Z5u-as-i5e" secondAttribute="leading" constant="15" id="qtH-B8-g7d"/>
+                                    <constraint firstItem="Gwp-xS-8mC" firstAttribute="leading" secondItem="Z5u-as-i5e" secondAttribute="leading" constant="15" id="rA1-3U-X1y"/>
+                                    <constraint firstItem="sDh-wn-bq4" firstAttribute="top" secondItem="Z5u-as-i5e" secondAttribute="top" constant="15" id="wwi-qy-PH7"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrderLine" translatesAutoresizingMaskIntoConstraints="NO" id="a3E-FV-DSs">
+                                <rect key="frame" x="0.0" y="35" width="414" height="72"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mDC-pU-dHz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mDC-pU-dHz" firstAttribute="trailing" secondItem="Z5u-as-i5e" secondAttribute="trailing" constant="20" id="0kV-fI-CJ8"/>
+                            <constraint firstItem="8Ls-wn-G5h" firstAttribute="leading" secondItem="mDC-pU-dHz" secondAttribute="leading" id="GvS-uQ-FGg"/>
+                            <constraint firstItem="8Ls-wn-G5h" firstAttribute="trailing" secondItem="mDC-pU-dHz" secondAttribute="trailing" id="N8K-5U-gHy"/>
+                            <constraint firstItem="mDC-pU-dHz" firstAttribute="bottom" secondItem="Z5u-as-i5e" secondAttribute="bottom" constant="129" id="NVO-to-QBh"/>
+                            <constraint firstItem="a3E-FV-DSs" firstAttribute="leading" secondItem="mDC-pU-dHz" secondAttribute="leading" id="ZjB-rP-dF7"/>
+                            <constraint firstItem="Z5u-as-i5e" firstAttribute="leading" secondItem="mDC-pU-dHz" secondAttribute="leading" constant="20" id="eRB-SV-JTg"/>
+                            <constraint firstItem="Z5u-as-i5e" firstAttribute="top" secondItem="mDC-pU-dHz" secondAttribute="top" constant="115" id="etL-fg-eIb"/>
+                            <constraint firstItem="a3E-FV-DSs" firstAttribute="trailing" secondItem="mDC-pU-dHz" secondAttribute="trailing" id="kvk-NZ-n5v"/>
+                            <constraint firstItem="2pr-XD-Tfy" firstAttribute="top" secondItem="a3E-FV-DSs" secondAttribute="bottom" constant="8" symbolic="YES" id="lbo-kr-pXk"/>
+                            <constraint firstAttribute="bottom" secondItem="8Ls-wn-G5h" secondAttribute="bottom" id="nHd-Ui-aXv"/>
+                            <constraint firstItem="a3E-FV-DSs" firstAttribute="top" secondItem="SIM-IK-yzh" secondAttribute="top" constant="35" id="ngC-DA-pbq"/>
+                            <constraint firstItem="8Ls-wn-G5h" firstAttribute="top" secondItem="SIM-IK-yzh" secondAttribute="top" id="o9f-Cw-hCQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleImage" destination="a3E-FV-DSs" id="a0M-8R-zZU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUe-YS-eTU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="3"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="OrderLine" width="1313" height="438"/>
+        <image name="background" width="284" height="583"/>
+        <image name="coffeeBag" width="342" height="730"/>
+        <image name="longBackground" width="600" height="350"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		6004B10E2A1180B40095CEA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004B10D2A1180B40095CEA0 /* AppDelegate.swift */; };
 		6004B1102A1180B40095CEA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004B10F2A1180B40095CEA0 /* SceneDelegate.swift */; };
-		6004B1122A1180B40095CEA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004B1112A1180B40095CEA0 /* ViewController.swift */; };
+		6004B1122A1180B40095CEA0 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004B1112A1180B40095CEA0 /* MainVC.swift */; };
 		6004B1152A1180B40095CEA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6004B1132A1180B40095CEA0 /* Main.storyboard */; };
 		6004B1172A1180B60095CEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6004B1162A1180B60095CEA0 /* Assets.xcassets */; };
 		6004B11A2A1180B60095CEA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6004B1182A1180B60095CEA0 /* LaunchScreen.storyboard */; };
 		6004B1252A1180B60095CEA0 /* KahveenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004B1242A1180B60095CEA0 /* KahveenTests.swift */; };
 		6004B12F2A1180B60095CEA0 /* KahveenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004B12E2A1180B60095CEA0 /* KahveenUITests.swift */; };
 		6004B1312A1180B70095CEA0 /* KahveenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004B1302A1180B70095CEA0 /* KahveenUITestsLaunchTests.swift */; };
+		601113482A12DD1800AF5487 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601113472A12DD1800AF5487 /* DemoData.swift */; };
+		604207922A1AD40600F16F73 /* DetailsAndOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604207912A1AD40600F16F73 /* DetailsAndOrderVC.swift */; };
+		604E89792A143EF40001A909 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604E89782A143EF30001A909 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 		6004B10A2A1180B40095CEA0 /* Kahveen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kahveen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6004B10D2A1180B40095CEA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6004B10F2A1180B40095CEA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6004B1112A1180B40095CEA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6004B1112A1180B40095CEA0 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		6004B1142A1180B40095CEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6004B1162A1180B60095CEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6004B1192A1180B60095CEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		6004B12A2A1180B60095CEA0 /* KahveenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KahveenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6004B12E2A1180B60095CEA0 /* KahveenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KahveenUITests.swift; sourceTree = "<group>"; };
 		6004B1302A1180B70095CEA0 /* KahveenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KahveenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		601113472A12DD1800AF5487 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
+		604207912A1AD40600F16F73 /* DetailsAndOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAndOrderVC.swift; sourceTree = "<group>"; };
+		604E89782A143EF30001A909 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,16 @@
 		6004B10C2A1180B40095CEA0 /* Kahveen */ = {
 			isa = PBXGroup;
 			children = (
+				601113472A12DD1800AF5487 /* DemoData.swift */,
+				6004B1132A1180B40095CEA0 /* Main.storyboard */,
+				6004B1182A1180B60095CEA0 /* LaunchScreen.storyboard */,
+				6004B1112A1180B40095CEA0 /* MainVC.swift */,
 				6004B10D2A1180B40095CEA0 /* AppDelegate.swift */,
 				6004B10F2A1180B40095CEA0 /* SceneDelegate.swift */,
-				6004B1112A1180B40095CEA0 /* ViewController.swift */,
-				6004B1132A1180B40095CEA0 /* Main.storyboard */,
 				6004B1162A1180B60095CEA0 /* Assets.xcassets */,
-				6004B1182A1180B60095CEA0 /* LaunchScreen.storyboard */,
 				6004B11B2A1180B60095CEA0 /* Info.plist */,
+				604E89782A143EF30001A909 /* CollectionViewCell.swift */,
+				604207912A1AD40600F16F73 /* DetailsAndOrderVC.swift */,
 			);
 			path = Kahveen;
 			sourceTree = "<group>";
@@ -258,7 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6004B1122A1180B40095CEA0 /* ViewController.swift in Sources */,
+				604207922A1AD40600F16F73 /* DetailsAndOrderVC.swift in Sources */,
+				604E89792A143EF40001A909 /* CollectionViewCell.swift in Sources */,
+				601113482A12DD1800AF5487 /* DemoData.swift in Sources */,
+				6004B1122A1180B40095CEA0 /* MainVC.swift in Sources */,
 				6004B10E2A1180B40095CEA0 /* AppDelegate.swift in Sources */,
 				6004B1102A1180B40095CEA0 /* SceneDelegate.swift in Sources */,
 			);
@@ -440,11 +452,13 @@
 				DEVELOPMENT_TEAM = R2HYM77JZB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kahveen/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Kahveen;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,11 +482,13 @@
 				DEVELOPMENT_TEAM = R2HYM77JZB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kahveen/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Kahveen;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
