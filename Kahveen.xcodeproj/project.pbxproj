@@ -109,12 +109,12 @@
 				6004B1132A1180B40095CEA0 /* Main.storyboard */,
 				6004B1182A1180B60095CEA0 /* LaunchScreen.storyboard */,
 				6004B1112A1180B40095CEA0 /* MainVC.swift */,
+				604207912A1AD40600F16F73 /* DetailsAndOrderVC.swift */,
 				6004B10D2A1180B40095CEA0 /* AppDelegate.swift */,
 				6004B10F2A1180B40095CEA0 /* SceneDelegate.swift */,
 				6004B1162A1180B60095CEA0 /* Assets.xcassets */,
 				6004B11B2A1180B60095CEA0 /* Info.plist */,
 				604E89782A143EF30001A909 /* CollectionViewCell.swift */,
-				604207912A1AD40600F16F73 /* DetailsAndOrderVC.swift */,
 			);
 			path = Kahveen;
 			sourceTree = "<group>";

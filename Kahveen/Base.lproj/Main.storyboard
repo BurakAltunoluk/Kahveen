@@ -153,7 +153,7 @@
                                 <rect key="frame" x="20" y="115" width="374" height="652"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2pr-XD-Tfy">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="652"/>
+                                        <rect key="frame" x="-8" y="40" width="374" height="652"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffeeBag" translatesAutoresizingMaskIntoConstraints="NO" id="Gwp-xS-8mC">
                                         <rect key="frame" x="15" y="15" width="90" height="175"/>
@@ -188,12 +188,27 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GMO-1S-Jdj">
                                         <rect key="frame" x="15" y="215" width="344" height="32"/>
                                         <segments>
-                                            <segment title="Light"/>
+                                            <segment title="Light" enabled="NO"/>
                                             <segment title="Medium"/>
                                             <segment title="Dark"/>
                                         </segments>
                                         <color key="tintColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="selectedSegmentTintColor" red="1" green="0.66230955329999996" blue="0.37716712679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="roastOfTypeSegmentControllerPressed:" destination="HuO-PZ-RMk" eventType="valueChanged" id="Dph-4x-y3D"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kSZ-S5-wvT">
+                                        <rect key="frame" x="10" y="606" width="239.5" height="32"/>
+                                        <segments>
+                                            <segment title="Cash"/>
+                                            <segment title="Card"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="selectedSegmentTintColor" red="1" green="0.93264865484722392" blue="0.14657897268464548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="cashOrCardSegmentedPressed:" destination="HuO-PZ-RMk" eventType="valueChanged" id="pHn-6a-KwU"/>
+                                        </connections>
                                     </segmentedControl>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="boo-qq-xr6">
                                         <rect key="frame" x="15" y="261" width="344" height="32"/>
@@ -206,17 +221,23 @@
                                         </segments>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="selectedSegmentTintColor" red="1" green="0.66230955329999996" blue="0.37716712679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="kgSegmentedControllerPressed:" destination="HuO-PZ-RMk" eventType="valueChanged" id="q4c-mX-rgm"/>
+                                        </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDN-wt-zbE">
-                                        <rect key="frame" x="262" y="605" width="97" height="31"/>
+                                        <rect key="frame" x="289.5" y="606" width="69.5" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="qMh-ob-kue"/>
                                         </constraints>
                                         <color key="tintColor" red="1" green="0.66230955329999996" blue="0.37716712679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="£12 order">
-                                            <color key="baseBackgroundColor" red="1" green="0.66230955329999996" blue="0.37716712679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <buttonConfiguration key="configuration" style="filled" title=" order">
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="orderItButton:" destination="HuO-PZ-RMk" eventType="touchUpInside" id="RS8-Ua-l8w"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£12/kg" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="tMv-7L-T0T">
                                         <rect key="frame" x="277" y="175" width="82" height="35"/>
@@ -229,36 +250,42 @@
                                         <color key="textColor" red="0.899023032" green="0.89430941259999996" blue="0.72308724999999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 1Kg x Brazil Santos (Medium)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="phv-Ki-dtw">
-                                        <rect key="frame" x="58.5" y="307" width="257" height="22"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" red="1" green="0.66230955329999996" blue="0.37716712679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 1Kg Brazil Santos (Medium)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="phv-Ki-dtw">
+                                        <rect key="frame" x="0.0" y="559.5" width="374" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.89625698330000003" green="0.89238023759999996" blue="0.69882184270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.11610568299585459" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="2pr-XD-Tfy" firstAttribute="top" secondItem="Z5u-as-i5e" secondAttribute="top" id="0dY-4E-LJ1"/>
+                                    <constraint firstItem="2pr-XD-Tfy" firstAttribute="top" secondItem="Z5u-as-i5e" secondAttribute="top" constant="40" id="0dY-4E-LJ1"/>
                                     <constraint firstAttribute="trailing" secondItem="sDh-wn-bq4" secondAttribute="trailing" constant="15" id="1El-sh-Lcj"/>
-                                    <constraint firstItem="2pr-XD-Tfy" firstAttribute="leading" secondItem="Z5u-as-i5e" secondAttribute="leading" id="1Kp-cu-sC3"/>
-                                    <constraint firstItem="phv-Ki-dtw" firstAttribute="centerX" secondItem="Z5u-as-i5e" secondAttribute="centerX" id="5KB-sP-P1e"/>
+                                    <constraint firstItem="2pr-XD-Tfy" firstAttribute="leading" secondItem="Z5u-as-i5e" secondAttribute="leading" constant="-8" id="1Kp-cu-sC3"/>
+                                    <constraint firstAttribute="trailing" secondItem="phv-Ki-dtw" secondAttribute="trailing" id="1TN-jH-dZO"/>
                                     <constraint firstItem="Gwp-xS-8mC" firstAttribute="top" secondItem="Z5u-as-i5e" secondAttribute="top" constant="15" id="7ku-9M-0DN"/>
                                     <constraint firstAttribute="trailing" secondItem="GMO-1S-Jdj" secondAttribute="trailing" constant="15" id="7oD-rS-cQa"/>
+                                    <constraint firstItem="kSZ-S5-wvT" firstAttribute="top" secondItem="phv-Ki-dtw" secondAttribute="bottom" constant="20" id="AEL-Ao-1QG"/>
                                     <constraint firstItem="Eq0-In-9KK" firstAttribute="top" secondItem="sDh-wn-bq4" secondAttribute="bottom" id="C7k-l6-G2r"/>
+                                    <constraint firstItem="zDN-wt-zbE" firstAttribute="leading" secondItem="kSZ-S5-wvT" secondAttribute="trailing" constant="40" id="CaN-YM-dkY"/>
                                     <constraint firstAttribute="trailing" secondItem="boo-qq-xr6" secondAttribute="trailing" constant="15" id="DWS-Xx-7xW"/>
-                                    <constraint firstAttribute="bottom" secondItem="zDN-wt-zbE" secondAttribute="bottom" constant="16" id="Hnp-ui-TdS"/>
+                                    <constraint firstItem="phv-Ki-dtw" firstAttribute="leading" secondItem="Z5u-as-i5e" secondAttribute="leading" id="Hg4-5H-xb6"/>
+                                    <constraint firstAttribute="bottom" secondItem="zDN-wt-zbE" secondAttribute="bottom" constant="15" id="Hnp-ui-TdS"/>
                                     <constraint firstItem="GMO-1S-Jdj" firstAttribute="top" secondItem="tMv-7L-T0T" secondAttribute="bottom" constant="5" id="OTi-26-rig"/>
+                                    <constraint firstItem="kSZ-S5-wvT" firstAttribute="leading" secondItem="Z5u-as-i5e" secondAttribute="leading" constant="10" id="Oae-Gi-97l"/>
                                     <constraint firstItem="GMO-1S-Jdj" firstAttribute="top" secondItem="Gwp-xS-8mC" secondAttribute="bottom" constant="25" id="PE0-4P-fJn"/>
-                                    <constraint firstAttribute="bottom" secondItem="2pr-XD-Tfy" secondAttribute="bottom" id="PSZ-5P-yjL"/>
+                                    <constraint firstAttribute="bottom" secondItem="2pr-XD-Tfy" secondAttribute="bottom" constant="-40" id="PSZ-5P-yjL"/>
+                                    <constraint firstItem="kSZ-S5-wvT" firstAttribute="top" secondItem="zDN-wt-zbE" secondAttribute="top" id="V5t-bT-Vef"/>
                                     <constraint firstAttribute="trailing" secondItem="tMv-7L-T0T" secondAttribute="trailing" constant="15" id="WGA-BL-TIi"/>
                                     <constraint firstItem="KBp-EX-Cez" firstAttribute="bottom" secondItem="Gwp-xS-8mC" secondAttribute="bottom" id="Wl2-eN-6sM"/>
-                                    <constraint firstAttribute="trailing" secondItem="2pr-XD-Tfy" secondAttribute="trailing" id="YeZ-RG-BJy"/>
+                                    <constraint firstAttribute="trailing" secondItem="2pr-XD-Tfy" secondAttribute="trailing" constant="8" id="YeZ-RG-BJy"/>
                                     <constraint firstItem="KBp-EX-Cez" firstAttribute="top" secondItem="Eq0-In-9KK" secondAttribute="bottom" id="cb3-HA-JA9"/>
+                                    <constraint firstAttribute="bottom" secondItem="kSZ-S5-wvT" secondAttribute="bottom" constant="15" id="gIe-Ge-yAa"/>
                                     <constraint firstItem="KBp-EX-Cez" firstAttribute="leading" secondItem="Gwp-xS-8mC" secondAttribute="trailing" constant="33" id="hFO-Ul-Zh0"/>
+                                    <constraint firstItem="kSZ-S5-wvT" firstAttribute="bottom" secondItem="zDN-wt-zbE" secondAttribute="bottom" id="hGR-jm-X2Q"/>
                                     <constraint firstAttribute="trailing" secondItem="KBp-EX-Cez" secondAttribute="trailing" constant="15" id="hmq-XZ-rTh"/>
                                     <constraint firstItem="boo-qq-xr6" firstAttribute="leading" secondItem="Z5u-as-i5e" secondAttribute="leading" constant="15" id="hxj-CX-OiV"/>
                                     <constraint firstItem="boo-qq-xr6" firstAttribute="top" secondItem="GMO-1S-Jdj" secondAttribute="bottom" constant="15" id="i4T-42-QbP"/>
-                                    <constraint firstItem="phv-Ki-dtw" firstAttribute="top" secondItem="boo-qq-xr6" secondAttribute="bottom" constant="15" id="iiZ-de-kqA"/>
                                     <constraint firstAttribute="trailing" secondItem="Eq0-In-9KK" secondAttribute="trailing" constant="15" id="jst-vG-x7r"/>
                                     <constraint firstAttribute="trailing" secondItem="zDN-wt-zbE" secondAttribute="trailing" constant="15" id="lsf-nG-Mev"/>
                                     <constraint firstItem="GMO-1S-Jdj" firstAttribute="leading" secondItem="Z5u-as-i5e" secondAttribute="leading" constant="15" id="qtH-B8-g7d"/>
@@ -281,19 +308,29 @@
                             <constraint firstItem="Z5u-as-i5e" firstAttribute="leading" secondItem="mDC-pU-dHz" secondAttribute="leading" constant="20" id="eRB-SV-JTg"/>
                             <constraint firstItem="Z5u-as-i5e" firstAttribute="top" secondItem="mDC-pU-dHz" secondAttribute="top" constant="115" id="etL-fg-eIb"/>
                             <constraint firstItem="a3E-FV-DSs" firstAttribute="trailing" secondItem="mDC-pU-dHz" secondAttribute="trailing" id="kvk-NZ-n5v"/>
-                            <constraint firstItem="2pr-XD-Tfy" firstAttribute="top" secondItem="a3E-FV-DSs" secondAttribute="bottom" constant="8" symbolic="YES" id="lbo-kr-pXk"/>
+                            <constraint firstItem="2pr-XD-Tfy" firstAttribute="top" secondItem="a3E-FV-DSs" secondAttribute="bottom" constant="48" id="lbo-kr-pXk"/>
                             <constraint firstAttribute="bottom" secondItem="8Ls-wn-G5h" secondAttribute="bottom" id="nHd-Ui-aXv"/>
                             <constraint firstItem="a3E-FV-DSs" firstAttribute="top" secondItem="SIM-IK-yzh" secondAttribute="top" constant="35" id="ngC-DA-pbq"/>
                             <constraint firstItem="8Ls-wn-G5h" firstAttribute="top" secondItem="SIM-IK-yzh" secondAttribute="top" id="o9f-Cw-hCQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allOrderLabel" destination="phv-Ki-dtw" id="xqm-L7-Dha"/>
+                        <outlet property="cashOrCardSegmentedController" destination="kSZ-S5-wvT" id="nWy-XW-JHQ"/>
+                        <outlet property="coffeeBagImage" destination="Gwp-xS-8mC" id="ieD-Ag-RVE"/>
+                        <outlet property="coffeeTitleLabel" destination="sDh-wn-bq4" id="5ay-g8-EMq"/>
+                        <outlet property="detailsText" destination="KBp-EX-Cez" id="avn-2z-DTF"/>
+                        <outlet property="kgSegmentedController" destination="boo-qq-xr6" id="Ev6-10-fRf"/>
+                        <outlet property="orderItButtonOutlet" destination="zDN-wt-zbE" id="ISs-Sj-CXk"/>
+                        <outlet property="priceLabel" destination="tMv-7L-T0T" id="nht-gX-BCt"/>
+                        <outlet property="roastTypeSegmentController" destination="GMO-1S-Jdj" id="WSh-jv-2Oo"/>
+                        <outlet property="roastingType" destination="Eq0-In-9KK" id="fJX-Dh-YH6"/>
                         <outlet property="titleImage" destination="a3E-FV-DSs" id="a0M-8R-zZU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUe-YS-eTU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822" y="3"/>
+            <point key="canvasLocation" x="1821.7391304347827" y="2.6785714285714284"/>
         </scene>
     </scenes>
     <resources>
@@ -303,6 +340,9 @@
         <image name="longBackground" width="600" height="350"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
