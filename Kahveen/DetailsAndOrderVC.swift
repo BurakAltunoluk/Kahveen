@@ -16,6 +16,7 @@ class DetailsAndOrderVC: UIViewController {
     var cardOrCash = "Cash"
     var total = 0
     
+    @IBOutlet weak var viewDetails: UIView!
     @IBOutlet weak var titleImage: UIImageView!
     @IBOutlet weak var coffeeBagImage: UIImageView!
     @IBOutlet weak var coffeeTitleLabel: UILabel!
@@ -31,6 +32,7 @@ class DetailsAndOrderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewDetails.layer.cornerRadius = 15
         titleImage.isUserInteractionEnabled = true
         let gesture = UITapGestureRecognizer(target: self, action: #selector(goback))
         priceLabel.text = "£\(unitPrice)/kg"

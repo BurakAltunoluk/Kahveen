@@ -17,7 +17,7 @@ final class MainVC: UIViewController {
     private var imageLogo = UIImageView()
     private var coffeeOptionImageLogo = UIImageView()
     private var menuStatus = true
-    
+    @IBOutlet weak var contactDetailsVC: UIView!
     
     //MARK: Cycle Life
     override func viewDidLoad() {
@@ -65,6 +65,7 @@ final class MainVC: UIViewController {
                 self.coffeeOptionImageLogo.alpha = self.menuStatus == true ? 1 : 0
                 self.collectionView.alpha = self.menuStatus == true ? 1 : 0
                 self.imageLogo.alpha = self.menuStatus == true ? 0 : 1
+                self.contactDetailsVC.alpha = self.menuStatus == true ? 0 : 1
           })
         
         self.menuStatus.toggle()
