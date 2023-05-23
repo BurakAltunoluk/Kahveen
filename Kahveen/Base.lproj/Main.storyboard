@@ -170,20 +170,38 @@
                                     <constraint firstItem="9cX-fz-XVp" firstAttribute="bottom" secondItem="iYx-nO-MgU" secondAttribute="bottom" id="yoA-xI-qIz"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hy8-AK-2ia">
+                                <rect key="frame" x="20" y="53" width="35" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="6Wg-Rg-s3S"/>
+                                    <constraint firstAttribute="height" constant="20" id="ULl-eC-cWQ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basketIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3b4-QD-gAf">
+                                <rect key="frame" x="359" y="53" width="35" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0Ne-5R-G6r"/>
+                                    <constraint firstAttribute="width" constant="35" id="f3c-jb-fwa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="m8m-UE-lSY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Q6-LV-fXv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3b4-QD-gAf" secondAttribute="trailing" constant="20" id="9wC-rc-woI"/>
+                            <constraint firstItem="3b4-QD-gAf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="HqW-OR-dUY"/>
                             <constraint firstItem="m8m-UE-lSY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Khn-Ld-yWW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EQ8-gJ-Xmf" secondAttribute="trailing" constant="70" id="TUe-Yz-6ZH"/>
                             <constraint firstAttribute="bottom" secondItem="m8m-UE-lSY" secondAttribute="bottom" constant="-4" id="Za0-W9-m5w"/>
                             <constraint firstItem="n98-Wr-X9h" firstAttribute="top" secondItem="EQ8-gJ-Xmf" secondAttribute="bottom" constant="15" id="dml-d4-nFc"/>
                             <constraint firstItem="EQ8-gJ-Xmf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="70" id="lwj-6f-5ve"/>
                             <constraint firstAttribute="bottom" secondItem="n98-Wr-X9h" secondAttribute="bottom" constant="20" id="m8Z-PX-Vm9"/>
+                            <constraint firstItem="hy8-AK-2ia" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="nSB-cK-StS"/>
                             <constraint firstItem="m8m-UE-lSY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ns6-7V-yza"/>
                             <constraint firstAttribute="trailing" secondItem="n98-Wr-X9h" secondAttribute="trailing" constant="75" id="uKd-fm-zU4"/>
                             <constraint firstItem="n98-Wr-X9h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="75" id="wWX-eK-Emg"/>
+                            <constraint firstItem="hy8-AK-2ia" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zj6-T2-0H3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="wHY-EM-XH9"/>
@@ -398,10 +416,12 @@
         <image name="OrderLine" width="1313" height="438"/>
         <image name="background" width="284" height="583"/>
         <image name="background2" width="454.5" height="933"/>
+        <image name="basketIcon" width="250" height="250"/>
         <image name="coffeeBag" width="342" height="730"/>
         <image name="detailsBackGround" width="400" height="600"/>
         <image name="emailIcon" width="125" height="125"/>
         <image name="longBackground" width="600" height="350"/>
+        <image name="menuIcon" width="200" height="50"/>
         <image name="phoneIcon" width="125" height="125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

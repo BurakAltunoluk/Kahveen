@@ -53,7 +53,7 @@ final class MainVC: UIViewController {
         self.imageLogo = UIImageView(frame: CGRect(x: 0, y: 0, width: screenX / 2, height: screenY / 7))
         imageLogo.image = UIImage(named: "LogoBrand")
         imageLogo.center.x = view.center.x
-        imageLogo.center.y += 40
+        imageLogo.center.y += view.center.y - screenX / 3.5 - 180
         view.addSubview(imageLogo)
         
     }
