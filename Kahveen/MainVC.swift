@@ -10,6 +10,7 @@ final class MainVC: UIViewController {
     
     //MARK: Priortiy
  
+    @IBOutlet weak var tableViewMenu: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     private let screenY = UIScreen.main.bounds.height
     private let screenX = UIScreen.main.bounds.width
@@ -18,16 +19,28 @@ final class MainVC: UIViewController {
     private var coffeeOptionImageLogo = UIImageView()
     private var menuStatus = true
     @IBOutlet weak var contactDetailsVC: UIView!
+    @IBOutlet weak var menuButtonImage: UIImageView!
+    @IBOutlet weak var menuView: UIView!
+    
+    private var menuList = ["My Orders","Company Details","Sign in"]
+    
     
     //MARK: Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
+        menuView.isHidden = true
+        menuButtonImage.isUserInteractionEnabled = true
         createOrderOptionsImage()
         logoBrandCreat()
         mainButton()
         gestures()
         collectionView.alpha = 0
         coffeeOptionImageLogo.alpha = 0
+        
+        var menuGesture = UITapGestureRecognizer(target: self, action: #selector(menuButtonCommand))
+        menuButtonImage.addGestureRecognizer(menuGesture)
+        menuView.layer.cornerRadius = 15
+        tableViewMenu.layer.cornerRadius = 15
     }
     
     //MARK: Functions
@@ -79,6 +92,13 @@ final class MainVC: UIViewController {
         coffeeOptionImageLogo.image = UIImage(named: "OrderLine")
         view.addSubview(coffeeOptionImageLogo)
     }
+    
+    @objc func menuButtonCommand() {
+        
+        self.menuView.isHidden = false
+        self.orderItImage.isHidden = true
+        self.imageLogo.isHidden = true
+    }
   }
 
 //MARK: Collection View
@@ -113,4 +133,26 @@ extension MainVC: UICollectionViewDataSource {
        }
      
      
+}
+
+extension MainVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableViewMenu.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
+        
+        cell.title.text = menuList[indexPath.row]
+     
+        return cell
+        
+    }
+    
+    
+    
+    
+    
+    
+    
 }

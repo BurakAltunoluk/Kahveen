@@ -9,7 +9,7 @@ import UIKit
 
 class DetailsAndOrderVC: UIViewController {
 
-    var kg = 1
+    var kg = 10
     var unitPrice = 10
     var typeOfRoasting = "Light"
     var whichCoffee = "Brazil Santozz"
@@ -32,12 +32,19 @@ class DetailsAndOrderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewDetails.layer.cornerRadius = 15
         titleImage.isUserInteractionEnabled = true
         let gesture = UITapGestureRecognizer(target: self, action: #selector(goback))
         priceLabel.text = "£\(unitPrice)/kg"
         titleImage.addGestureRecognizer(gesture)
+        
+        self.allOrderLabel.text = "\(kg) Kg - \(whichCoffee) (\(typeOfRoasting))"
+        total = unitPrice * kg
+        orderItButtonOutlet.setTitle("£\(total) order", for: .normal)
+        
     }
+    
     @IBAction func roastOfTypeSegmentControllerPressed(_ sender: UISegmentedControl) {
         switch roastTypeSegmentController.selectedSegmentIndex {
             

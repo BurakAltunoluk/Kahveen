@@ -19,6 +19,7 @@
 		601113482A12DD1800AF5487 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601113472A12DD1800AF5487 /* DemoData.swift */; };
 		604207922A1AD40600F16F73 /* DetailsAndOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604207912A1AD40600F16F73 /* DetailsAndOrderVC.swift */; };
 		604E89792A143EF40001A909 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604E89782A143EF30001A909 /* CollectionViewCell.swift */; };
+		60DAC9E22A228AAA00ABAE08 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAC9E12A228AAA00ABAE08 /* MenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		601113472A12DD1800AF5487 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		604207912A1AD40600F16F73 /* DetailsAndOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAndOrderVC.swift; sourceTree = "<group>"; };
 		604E89782A143EF30001A909 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		60DAC9E12A228AAA00ABAE08 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				6004B1162A1180B60095CEA0 /* Assets.xcassets */,
 				6004B11B2A1180B60095CEA0 /* Info.plist */,
 				604E89782A143EF30001A909 /* CollectionViewCell.swift */,
+				60DAC9E12A228AAA00ABAE08 /* MenuTableViewCell.swift */,
 			);
 			path = Kahveen;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				604207922A1AD40600F16F73 /* DetailsAndOrderVC.swift in Sources */,
 				604E89792A143EF40001A909 /* CollectionViewCell.swift in Sources */,
+				60DAC9E22A228AAA00ABAE08 /* MenuTableViewCell.swift in Sources */,
 				601113482A12DD1800AF5487 /* DemoData.swift in Sources */,
 				6004B1122A1180B40095CEA0 /* MainVC.swift in Sources */,
 				6004B10E2A1180B40095CEA0 /* AppDelegate.swift in Sources */,
