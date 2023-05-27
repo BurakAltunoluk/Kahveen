@@ -275,8 +275,8 @@
                                         <color key="textColor" systemColor="systemYellowColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDm-NQ-kSn">
-                                        <rect key="frame" x="260" y="597" width="39" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V1.1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDm-NQ-kSn">
+                                        <rect key="frame" x="150" y="597" width="149" height="18"/>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
                                         <color key="textColor" systemColor="systemYellowColor"/>
                                         <nil key="highlightedColor"/>
@@ -290,7 +290,7 @@
                                     <constraint firstItem="JOl-wa-WD1" firstAttribute="leading" secondItem="SnX-Qm-NUR" secondAttribute="leading" id="Fqg-oO-KQh"/>
                                     <constraint firstAttribute="trailing" secondItem="aaq-Gc-8sU" secondAttribute="trailing" constant="147" id="HmB-sW-A4r"/>
                                     <constraint firstItem="sKt-Z3-veD" firstAttribute="top" secondItem="JOl-wa-WD1" secondAttribute="bottom" id="JCq-QO-HEa"/>
-                                    <constraint firstItem="VDm-NQ-kSn" firstAttribute="leading" secondItem="SnX-Qm-NUR" secondAttribute="leading" constant="260" id="KMs-tv-kSx"/>
+                                    <constraint firstItem="VDm-NQ-kSn" firstAttribute="leading" secondItem="SnX-Qm-NUR" secondAttribute="leading" constant="150" id="KMs-tv-kSx"/>
                                     <constraint firstAttribute="trailing" secondItem="VDm-NQ-kSn" secondAttribute="trailing" constant="5" id="NnX-ro-u0I"/>
                                     <constraint firstAttribute="bottom" secondItem="VDm-NQ-kSn" secondAttribute="bottom" constant="10" id="Oag-pi-FoZ"/>
                                     <constraint firstAttribute="trailing" secondItem="JOl-wa-WD1" secondAttribute="trailing" id="ZnC-2h-fBt"/>

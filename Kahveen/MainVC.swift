@@ -18,6 +18,7 @@ final class MainVC: UIViewController {
     private var imageLogo = UIImageView()
     private var coffeeOptionImageLogo = UIImageView()
     private var menuStatus = true
+    private var menuOpen = false
     @IBOutlet weak var contactDetailsVC: UIView!
     @IBOutlet weak var menuButtonImage: UIImageView!
     @IBOutlet weak var menuView: UIView!
@@ -94,10 +95,20 @@ final class MainVC: UIViewController {
     }
     
     @objc func menuButtonCommand() {
-        
-        self.menuView.isHidden = false
-        self.orderItImage.isHidden = true
-        self.imageLogo.isHidden = true
+        if self.menuOpen {
+           
+                self.menuView.isHidden = true
+                self.orderItImage.isHidden = false
+                self.imageLogo.isHidden = false
+            
+        } else {
+            
+            self.menuView.isHidden = false
+            self.orderItImage.isHidden = true
+            self.imageLogo.isHidden = true
+            
+        }
+        self.menuOpen.toggle()
     }
   }
 
