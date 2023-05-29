@@ -10,6 +10,7 @@ final class MainVC: UIViewController {
     
     //MARK: Priortiy
  
+    @IBOutlet weak var mainBackgroundImage: UIImageView!
     @IBOutlet weak var tableViewMenu: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     private let screenY = UIScreen.main.bounds.height
@@ -23,14 +24,14 @@ final class MainVC: UIViewController {
     @IBOutlet weak var menuButtonImage: UIImageView!
     @IBOutlet weak var menuView: UIView!
     
-    private var menuList = ["My Orders","Company Details","Sign in"]
-    
+    private var menuList = ["My Orders","Contact Supplier","Sign Out"]
     
     //MARK: Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
         menuView.isHidden = true
         menuButtonImage.isUserInteractionEnabled = true
+        mainBackgroundImage.isUserInteractionEnabled = true
         createOrderOptionsImage()
         logoBrandCreat()
         mainButton()
@@ -38,8 +39,13 @@ final class MainVC: UIViewController {
         collectionView.alpha = 0
         coffeeOptionImageLogo.alpha = 0
         
-        var menuGesture = UITapGestureRecognizer(target: self, action: #selector(menuButtonCommand))
+        let menuGesture = UITapGestureRecognizer(target: self, action: #selector(menuButtonCommand))
+        let backgroundGesture = UITapGestureRecognizer(target: self, action: #selector(backgroundGesture))
+       
+        mainBackgroundImage.addGestureRecognizer(backgroundGesture)
+       
         menuButtonImage.addGestureRecognizer(menuGesture)
+        
         menuView.layer.cornerRadius = 15
         tableViewMenu.layer.cornerRadius = 15
     }
@@ -92,6 +98,17 @@ final class MainVC: UIViewController {
         self.coffeeOptionImageLogo.center.x = view.center.x
         coffeeOptionImageLogo.image = UIImage(named: "OrderLine")
         view.addSubview(coffeeOptionImageLogo)
+    }
+    
+    @objc func backgroundGesture() {
+        if self.menuOpen {
+           
+                self.menuView.isHidden = true
+                self.orderItImage.isHidden = false
+                self.imageLogo.isHidden = false
+                self.menuOpen.toggle()
+        }
+       
     }
     
     @objc func menuButtonCommand() {
@@ -159,11 +176,5 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         return cell
         
     }
-    
-    
-    
-    
-    
-    
     
 }
