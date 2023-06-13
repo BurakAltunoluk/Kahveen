@@ -24,7 +24,7 @@ final class MainVC: UIViewController {
     @IBOutlet weak var menuButtonImage: UIImageView!
     @IBOutlet weak var menuView: UIView!
     
-    private var menuList = ["My Orders","Contact Supplier","Sign Out"]
+    private var menuList = ["My Orders","My Account","Contact Supplier","Sign Out"]
     
     //MARK: Cycle Life
     override func viewDidLoad() {

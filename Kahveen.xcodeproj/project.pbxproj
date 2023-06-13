@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6001EDF62A385E730032A01A /* AllCustomerAdminPanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6001EDF52A385E730032A01A /* AllCustomerAdminPanelVC.swift */; };
+		6001EDF82A3861410032A01A /* CustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6001EDF72A3861410032A01A /* CustomerModel.swift */; };
 		6004B10E2A1180B40095CEA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004B10D2A1180B40095CEA0 /* AppDelegate.swift */; };
 		6004B1102A1180B40095CEA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004B10F2A1180B40095CEA0 /* SceneDelegate.swift */; };
 		6004B1122A1180B40095CEA0 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004B1112A1180B40095CEA0 /* MainVC.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6001EDF52A385E730032A01A /* AllCustomerAdminPanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCustomerAdminPanelVC.swift; sourceTree = "<group>"; };
+		6001EDF72A3861410032A01A /* CustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModel.swift; sourceTree = "<group>"; };
 		6004B10A2A1180B40095CEA0 /* Kahveen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kahveen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6004B10D2A1180B40095CEA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6004B10F2A1180B40095CEA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6001EDF92A3872D20032A01A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6001EDF72A3861410032A01A /* CustomerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6001EDFA2A3872E40032A01A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6001EDFE2A38738C0032A01A /* Controllers */,
+				6001EDFC2A3873550032A01A /* Cells */,
+				6001EDFB2A38732C0032A01A /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6001EDFB2A38732C0032A01A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6004B1182A1180B60095CEA0 /* LaunchScreen.storyboard */,
+				6004B1132A1180B40095CEA0 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6001EDFC2A3873550032A01A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				604E89782A143EF30001A909 /* CollectionViewCell.swift */,
+				60DAC9E12A228AAA00ABAE08 /* MenuTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6001EDFE2A38738C0032A01A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6004B1112A1180B40095CEA0 /* MainVC.swift */,
+				6001EDF52A385E730032A01A /* AllCustomerAdminPanelVC.swift */,
+				604207912A1AD40600F16F73 /* DetailsAndOrderVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6001EDFF2A3873E50032A01A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6004B1012A1180B40095CEA0 = {
 			isa = PBXGroup;
 			children = (
@@ -107,17 +164,14 @@
 		6004B10C2A1180B40095CEA0 /* Kahveen */ = {
 			isa = PBXGroup;
 			children = (
-				601113472A12DD1800AF5487 /* DemoData.swift */,
-				6004B1132A1180B40095CEA0 /* Main.storyboard */,
-				6004B1182A1180B60095CEA0 /* LaunchScreen.storyboard */,
-				6004B1112A1180B40095CEA0 /* MainVC.swift */,
-				604207912A1AD40600F16F73 /* DetailsAndOrderVC.swift */,
-				6004B10D2A1180B40095CEA0 /* AppDelegate.swift */,
-				6004B10F2A1180B40095CEA0 /* SceneDelegate.swift */,
 				6004B1162A1180B60095CEA0 /* Assets.xcassets */,
 				6004B11B2A1180B60095CEA0 /* Info.plist */,
-				604E89782A143EF30001A909 /* CollectionViewCell.swift */,
-				60DAC9E12A228AAA00ABAE08 /* MenuTableViewCell.swift */,
+				6004B10F2A1180B40095CEA0 /* SceneDelegate.swift */,
+				6004B10D2A1180B40095CEA0 /* AppDelegate.swift */,
+				601113472A12DD1800AF5487 /* DemoData.swift */,
+				6001EDFA2A3872E40032A01A /* View */,
+				6001EDFF2A3873E50032A01A /* ViewModel */,
+				6001EDF92A3872D20032A01A /* Model */,
 			);
 			path = Kahveen;
 			sourceTree = "<group>";
@@ -275,7 +329,9 @@
 				60DAC9E22A228AAA00ABAE08 /* MenuTableViewCell.swift in Sources */,
 				601113482A12DD1800AF5487 /* DemoData.swift in Sources */,
 				6004B1122A1180B40095CEA0 /* MainVC.swift in Sources */,
+				6001EDF62A385E730032A01A /* AllCustomerAdminPanelVC.swift in Sources */,
 				6004B10E2A1180B40095CEA0 /* AppDelegate.swift in Sources */,
+				6001EDF82A3861410032A01A /* CustomerModel.swift in Sources */,
 				6004B1102A1180B40095CEA0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
